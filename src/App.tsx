@@ -11,13 +11,16 @@ function App() {
         {id: 4, title: 'ReactJS2', isDone: false}
     ])
     const removeTasks = (elId: number) => {
-        //tasks = tasks.filter((el) => el.id !== elId)
         setTasks(tasks.filter((el) => el.id !== elId))
         console.log(tasks)
     }
+
     return (
         <div className="App">
-            <Todolist title="What to learn" tasks={tasks} removeTasks={removeTasks}/>
+            <Todolist title="What to learn"
+                      tasks={tasks}
+                      removeTasks={removeTasks}
+            />
         </div>
     );
 }
